@@ -1,8 +1,4 @@
-import uvicorn
-import os
-
-app = FastAPI(title="TikTok Analysis API", version="1.0.0")
-app = FastAPI(title="TikTok Analysis API", version="1.0.0")from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import yt_dlp
 import uvicorn
@@ -81,6 +77,3 @@ def analyze_user(username: str):
 if __name__ == "__main__":
     # Sunucuyu başlat
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-# CORS Configuration
-app.add_middleware(
